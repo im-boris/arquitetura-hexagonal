@@ -1,4 +1,4 @@
-package br.com.hexagon.negocio;
+package br.com.hexagon.services;
 
 import br.com.hexagon.infraestrutura.service.usecase.IUseCaseRunner;
 import br.com.hexagon.api.PokemonController;
