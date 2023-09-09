@@ -1,4 +1,4 @@
-package br.com.hexagon.pojo.pokemon;
+package br.com.hexagon.pojo.negocio.pokemon;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;

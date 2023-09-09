@@ -1,6 +1,6 @@
 package br.com.hexagon.api;
 
-import br.com.hexagon.pojo.pokemon.RequisicaoCadastraPokemonDTO;
+import br.com.hexagon.pojo.negocio.pokemon.RequisicaoCadastraPokemonDTO;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;

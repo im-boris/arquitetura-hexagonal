@@ -2,7 +2,7 @@ package br.com.hexagon.negocio;
 
 import br.com.hexagon.infraestrutura.service.usecase.IUseCaseRunner;
 import br.com.hexagon.api.PokemonController;
-import br.com.hexagon.pojo.pokemon.RequisicaoCadastraPokemonDTO;
+import br.com.hexagon.pojo.negocio.pokemon.RequisicaoCadastraPokemonDTO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

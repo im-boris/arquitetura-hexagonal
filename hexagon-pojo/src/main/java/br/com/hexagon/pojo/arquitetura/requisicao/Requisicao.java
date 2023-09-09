@@ -1,4 +1,4 @@
-package br.com.hexagon.pojo.requisicao;
+package br.com.hexagon.pojo.arquitetura.requisicao;
 
 import lombok.Getter;
 import lombok.Setter;

@@ -1,4 +1,4 @@
-package br.com.hexagon.pojo.integracao;
+package br.com.hexagon.pojo.arquitetura.integracao;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;

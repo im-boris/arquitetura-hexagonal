@@ -1,7 +1,7 @@
 package br.com.hexagon.usecases;
 
 
-import br.com.hexagon.pojo.contexto.Contexto;
+import br.com.hexagon.pojo.arquitetura.contexto.Contexto;
 
 public interface IUseCase<C extends Contexto> {
 

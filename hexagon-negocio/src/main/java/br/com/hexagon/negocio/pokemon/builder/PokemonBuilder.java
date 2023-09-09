@@ -2,7 +2,7 @@ package br.com.hexagon.negocio.pokemon.builder;
 
 import br.com.hexagon.adapters.pokemon.builder.IPokemonBuilder;
 import br.com.hexagon.entidade.Pokemon;
-import br.com.hexagon.pojo.pokemon.PokemonDTO;
+import br.com.hexagon.pojo.negocio.pokemon.PokemonDTO;
 import org.springframework.stereotype.Component;
 
 @Component

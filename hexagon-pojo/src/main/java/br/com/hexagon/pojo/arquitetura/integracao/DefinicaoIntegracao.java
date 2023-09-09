@@ -1,4 +1,4 @@
-package br.com.hexagon.pojo.integracao;
+package br.com.hexagon.pojo.arquitetura.integracao;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;

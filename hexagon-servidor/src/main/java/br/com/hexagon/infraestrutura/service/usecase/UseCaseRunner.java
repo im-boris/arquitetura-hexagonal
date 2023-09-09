@@ -2,8 +2,8 @@ package br.com.hexagon.infraestrutura.service.usecase;
 
 import br.com.hexagon.infraestrutura.arquitetura.UseCaseMapper;
 import br.com.hexagon.infraestrutura.service.integracao.IIntegracao;
-import br.com.hexagon.pojo.contexto.Contexto;
-import br.com.hexagon.pojo.requisicao.Requisicao;
+import br.com.hexagon.pojo.arquitetura.contexto.Contexto;
+import br.com.hexagon.pojo.arquitetura.requisicao.Requisicao;
 import br.com.hexagon.usecases.IUseCase;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationContext;

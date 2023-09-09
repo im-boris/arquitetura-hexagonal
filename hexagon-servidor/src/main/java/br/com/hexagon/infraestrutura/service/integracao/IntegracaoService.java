@@ -1,9 +1,9 @@
 package br.com.hexagon.infraestrutura.service.integracao;
 
-import br.com.hexagon.pojo.contexto.Contexto;
-import br.com.hexagon.pojo.integracao.DefinicaoIntegracao;
-import br.com.hexagon.pojo.integracao.IntegracaoEnum;
-import br.com.hexagon.pojo.integracao.IntegracaoFluxo;
+import br.com.hexagon.pojo.arquitetura.contexto.Contexto;
+import br.com.hexagon.pojo.arquitetura.integracao.DefinicaoIntegracao;
+import br.com.hexagon.pojo.arquitetura.integracao.IntegracaoEnum;
+import br.com.hexagon.pojo.arquitetura.integracao.IntegracaoFluxo;
 import br.com.hexagon.usecases.IUseCase;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationContext;

@@ -1,6 +1,6 @@
-package br.com.hexagon.pojo.contexto;
+package br.com.hexagon.pojo.arquitetura.contexto;
 
-import br.com.hexagon.pojo.requisicao.Requisicao;
+import br.com.hexagon.pojo.arquitetura.requisicao.Requisicao;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;

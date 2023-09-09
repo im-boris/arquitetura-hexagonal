@@ -1,7 +1,7 @@
 package br.com.hexagon.infraestrutura.arquitetura;
 
-import br.com.hexagon.pojo.contexto.Contexto;
-import br.com.hexagon.usecases.pokemon.ContextoCadastraPokemon;
+import br.com.hexagon.pojo.arquitetura.contexto.Contexto;
+import br.com.hexagon.usecases.pokemon.CadastraPokemonContexto;
 import br.com.hexagon.usecases.IUseCase;
 import br.com.hexagon.usecases.pokemon.CadastraPokemonUseCase;
 import lombok.AllArgsConstructor;
@@ -13,7 +13,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public enum UseCaseMapper {
 
-    CADASTRA_POKEMON(1, new CadastraPokemonUseCase(), new ContextoCadastraPokemon());
+    CADASTRA_POKEMON(1, new CadastraPokemonUseCase(), new CadastraPokemonContexto());
 
 
     private Integer codigoRequisicao;
