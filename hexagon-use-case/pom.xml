@@ -11,16 +11,17 @@
 
     <artifactId>hexagon-use-case</artifactId>
     <packaging>jar</packaging>
+
     <dependencies>
         <dependency>
             <groupId>br.com</groupId>
-            <artifactId>hexagon-pojo</artifactId>
+            <artifactId>hexagon-negocio</artifactId>
             <version>0.0.1-SNAPSHOT</version>
             <scope>compile</scope>
         </dependency>
         <dependency>
             <groupId>br.com</groupId>
-            <artifactId>hexagon-negocio</artifactId>
+            <artifactId>hexagon-adapters</artifactId>
             <version>0.0.1-SNAPSHOT</version>
             <scope>compile</scope>
         </dependency>

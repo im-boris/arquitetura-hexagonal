@@ -9,13 +9,20 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>hexagon-negocio</artifactId>
+    <artifactId>hexagon-adapters</artifactId>
     <packaging>jar</packaging>
 
     <dependencies>
+
         <dependency>
             <groupId>br.com</groupId>
-            <artifactId>hexagon-adapters</artifactId>
+            <artifactId>hexagon-pojo</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+            <scope>compile</scope>
+        </dependency>
+        <dependency>
+            <groupId>br.com</groupId>
+            <artifactId>hexagon-entidade</artifactId>
             <version>0.0.1-SNAPSHOT</version>
             <scope>compile</scope>
         </dependency>

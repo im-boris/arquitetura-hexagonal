@@ -10,7 +10,7 @@
 		<module>hexagon-use-case</module>
 		<module>hexagon-api</module>
 		<module>hexagon-pojo</module>
-		<module>hexagon-business-logic</module>
+		<module>hexagon-adapters</module>
 	</modules>
 
 	<parent>
