@@ -1,6 +1,7 @@
 package br.com.hexagon.infraestrutura.service.usecase;
 
 import br.com.hexagon.infraestrutura.arquitetura.UseCaseMapper;
+import br.com.hexagon.infraestrutura.service.integracao.IIntegracao;
 import br.com.hexagon.pojo.contexto.Contexto;
 import br.com.hexagon.pojo.requisicao.Requisicao;
 import br.com.hexagon.usecases.IUseCase;
@@ -14,21 +15,22 @@ import org.springframework.transaction.annotation.Transactional;
 public class UseCaseRunner implements IUseCaseRunner {
 
     @Autowired
-    private ApplicationContext context;
+    private ApplicationContext applicationContext;
 
-//    @Autowired
-//    private IIntegracao integracaoService;
+    @Autowired
+    private IIntegracao integracaoService;
+
 
     @Transactional(propagation = Propagation.REQUIRES_NEW)
     public <C extends Contexto> C run(Requisicao requisicao) throws Exception {
 
         UseCaseMapper useCase = getUseCase(requisicao);
-        Contexto contexto = useCase.getContexto();
-        contexto.setRequisicao(requisicao);
-        IUseCase useCaseBean = getUseCaseBean(useCase);
-        disparaFluxo(useCaseBean, contexto);
+        IUseCase beanUseCase = getUseCaseBean(useCase);
+        Contexto contextoUseCase = useCase.getContexto();
+        contextoUseCase.setRequisicao(requisicao);
+        disparaFluxo(beanUseCase, contextoUseCase);
 
-        return (C)contexto;
+        return (C)contextoUseCase;
 
     }
 
@@ -37,28 +39,19 @@ public class UseCaseRunner implements IUseCaseRunner {
     }
 
     private IUseCase getUseCaseBean(UseCaseMapper useCase) {
-        return context.getBean(useCase.getUseCase().getClass());
+        return applicationContext.getBean(useCase.getUseCase().getClass());
     }
 
-    private void disparaFluxo(IUseCase useCase, Contexto contexto) throws Exception{
+    private void disparaFluxo(IUseCase useCase, Contexto contexto) throws Exception {
 
         useCase.preExecuta(contexto);
-//        executaIntegracoesPreExecucao(useCase, contexto);
+        integracaoService.executaIntegracoesPreExecucao(useCase, contexto);
 
         useCase.execucao(contexto);
 
-//        executaIntegracoesPosExecucao(useCase, contexto);
+        integracaoService.executaIntegracoesPosExecucao(useCase, contexto);
         useCase.posExecuta(contexto);
 
     }
-//
-//    private void executaIntegracoesPreExecucao(IMediator mediatorBean, Contexto contexto) throws Exception {
-//        if(mediatorBean.executaIntegracoesPreExecucao(contexto))
-//            integracaoService.executaIntegracoes(contexto, integracaoService.getAnnotation(mediatorBean).preExecucao());
-//    }
-//
-//    private void executaIntegracoesPosExecucao(IMediator mediatorBean, Contexto contexto) throws Exception {
-//        if(mediatorBean.executaIntegracoesPosExecucao(contexto))
-//            integracaoService.executaIntegracoes(contexto, integracaoService.getAnnotation(mediatorBean).posExecucao());
-//    }
+
 }

@@ -1,7 +1,7 @@
 package br.com.hexagon.negocio.pokemon.validator;
 
 import br.com.hexagon.entidade.Pokemon;
-import br.com.hexagon.adapters.pokemon.IValidacaoPokemon;
+import br.com.hexagon.adapters.pokemon.validator.IValidacaoPokemon;
 import org.springframework.stereotype.Component;
 
 @Component

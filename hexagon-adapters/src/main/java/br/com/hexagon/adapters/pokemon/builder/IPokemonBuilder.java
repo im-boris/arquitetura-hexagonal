@@ -1,4 +1,4 @@
-package br.com.hexagon.adapters.pokemon;
+package br.com.hexagon.adapters.pokemon.builder;
 
 import br.com.hexagon.entidade.Pokemon;
 import br.com.hexagon.pojo.pokemon.PokemonDTO;
