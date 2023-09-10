@@ -1,5 +1,6 @@
 package br.com.hexagon.infraestrutura.service.usecase;
 
+import br.com.hexagon.adapters.arquitetura.usecase.IUseCaseRunner;
 import br.com.hexagon.infraestrutura.arquitetura.UseCaseMapper;
 import br.com.hexagon.adapters.arquitetura.integracao.IIntegracao;
 import br.com.hexagon.pojo.arquitetura.contexto.Contexto;

@@ -1,6 +1,6 @@
 package br.com.hexagon.services;
 
-import br.com.hexagon.infraestrutura.service.usecase.IUseCaseRunner;
+import br.com.hexagon.adapters.arquitetura.usecase.IUseCaseRunner;
 import br.com.hexagon.api.PokemonController;
 import br.com.hexagon.pojo.negocio.pokemon.RequisicaoCadastraPokemonDTO;
 import org.springframework.beans.factory.annotation.Autowired;
