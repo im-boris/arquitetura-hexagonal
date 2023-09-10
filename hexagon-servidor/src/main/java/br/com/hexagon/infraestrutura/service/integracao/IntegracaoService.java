@@ -19,7 +19,7 @@ public class IntegracaoService implements IIntegracao {
 
 
     @Override
-    public void executa(Contexto contexto, IntegracaoEnum integracaoEnum) {
+    public void executa(IntegracaoEnum integracaoEnum, Contexto contexto) {
         IntegracaoFluxo integracao = (IntegracaoFluxo) context.getBean(integracaoEnum.getNome());
         integracao.executa(contexto);
     }
@@ -35,12 +35,12 @@ public class IntegracaoService implements IIntegracao {
         }
     }
 
-    public void executaIntegracoesPreExecucao(IUseCase useCaseBean, Contexto contexto) throws Exception {
+    public void executaIntegracoesPreExecucao(Contexto contexto, IUseCase useCaseBean) throws Exception {
         if(useCaseBean.executaIntegracoesPreExecucao(contexto))
             executaIntegracoes(contexto, this.getAnnotation(useCaseBean).preExecucao());
     }
 
-    public void executaIntegracoesPosExecucao(IUseCase useCaseBean, Contexto contexto) throws Exception {
+    public void executaIntegracoesPosExecucao(Contexto contexto, IUseCase useCaseBean) throws Exception {
         if(useCaseBean.executaIntegracoesPosExecucao(contexto))
             executaIntegracoes(contexto, this.getAnnotation(useCaseBean).posExecucao());
     }

@@ -12,7 +12,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 @Component
-@DefinicaoIntegracao(preExecucao = {},
+@DefinicaoIntegracao(preExecucao = {IntegracaoEnum.CADASTRA_POKEMON},
                      posExecucao = {IntegracaoEnum.CADASTRA_POKEMON})
 public class UseCaseCadastraPokemon implements IUseCase<ContextoCadastraPokemon> {
 
@@ -31,7 +31,7 @@ public class UseCaseCadastraPokemon implements IUseCase<ContextoCadastraPokemon>
         System.out.println(validacaoPokemon.verificaNivelPoder());
         builder.toDto(new Pokemon());
         builder.toEntity(new PokemonDTO());
-        integracao.executa(contexto, IntegracaoEnum.CADASTRA_POKEMON);
+        integracao.executa(IntegracaoEnum.CADASTRA_POKEMON, contexto);
     }
 
 }

@@ -5,8 +5,8 @@ import br.com.hexagon.pojo.arquitetura.contexto.Contexto;
 import br.com.hexagon.pojo.arquitetura.integracao.IntegracaoEnum;
 
 public interface IIntegracao {
-    void executa(Contexto contexto, IntegracaoEnum integracaoEnum);
+    void executa(IntegracaoEnum integracaoEnum, Contexto contexto);
     void executaIntegracoes(Contexto contexto, IntegracaoEnum[] integracoes) throws Exception;
-    void executaIntegracoesPreExecucao(IUseCase useCaseBean, Contexto contexto) throws Exception;
-    void executaIntegracoesPosExecucao(IUseCase useCaseBean, Contexto contexto) throws Exception;
+    void executaIntegracoesPreExecucao(Contexto contexto, IUseCase useCaseBean) throws Exception;
+    void executaIntegracoesPosExecucao(Contexto contexto, IUseCase useCaseBean) throws Exception;
 }

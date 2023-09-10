@@ -46,11 +46,11 @@ public class UseCaseRunner implements IUseCaseRunner {
     private void disparaFluxo(IUseCase useCase, Contexto contexto) throws Exception {
 
         useCase.preExecuta(contexto);
-        integracaoService.executaIntegracoesPreExecucao(useCase, contexto);
+        integracaoService.executaIntegracoesPreExecucao(contexto, useCase);
 
         useCase.execucao(contexto);
 
-        integracaoService.executaIntegracoesPosExecucao(useCase, contexto);
+        integracaoService.executaIntegracoesPosExecucao(contexto, useCase);
         useCase.posExecuta(contexto);
 
     }
