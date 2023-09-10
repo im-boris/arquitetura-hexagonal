@@ -1,6 +1,6 @@
 package br.com.hexagon.negocio.pokemon.integracao.local;
 
-import br.com.hexagon.adapters.pokemon.integracao.local.ICadastraPokemon;
+import br.com.hexagon.adapters.negocio.pokemon.integracao.local.ICadastraPokemon;
 import br.com.hexagon.pojo.arquitetura.contexto.Contexto;
 import br.com.hexagon.pojo.arquitetura.integracao.IntegracaoFluxo;
 import org.springframework.stereotype.Component;

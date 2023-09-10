@@ -1,4 +1,4 @@
-package br.com.hexagon.usecases;
+package br.com.hexagon.adapters.arquitetura.usecase;
 
 
 import br.com.hexagon.pojo.arquitetura.contexto.Contexto;

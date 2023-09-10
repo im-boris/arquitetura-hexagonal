@@ -1,4 +1,4 @@
-package br.com.hexagon.adapters.pokemon.integracao.local;
+package br.com.hexagon.adapters.negocio.pokemon;
 
 import br.com.hexagon.entidade.Pokemon;
 import org.springframework.data.jpa.repository.JpaRepository;

@@ -2,7 +2,7 @@ package br.com.hexagon.infraestrutura.arquitetura;
 
 import br.com.hexagon.pojo.arquitetura.contexto.Contexto;
 import br.com.hexagon.usecases.pokemon.CadastraPokemonContexto;
-import br.com.hexagon.usecases.IUseCase;
+import br.com.hexagon.adapters.arquitetura.usecase.IUseCase;
 import br.com.hexagon.usecases.pokemon.CadastraPokemonUseCase;
 import lombok.AllArgsConstructor;
 import lombok.Getter;

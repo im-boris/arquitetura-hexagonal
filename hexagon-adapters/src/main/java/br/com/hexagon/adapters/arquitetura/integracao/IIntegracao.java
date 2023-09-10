@@ -1,8 +1,8 @@
-package br.com.hexagon.infraestrutura.service.integracao;
+package br.com.hexagon.adapters.arquitetura.integracao;
 
+import br.com.hexagon.adapters.arquitetura.usecase.IUseCase;
 import br.com.hexagon.pojo.arquitetura.contexto.Contexto;
 import br.com.hexagon.pojo.arquitetura.integracao.IntegracaoEnum;
-import br.com.hexagon.usecases.IUseCase;
 
 public interface IIntegracao {
     void executa(Contexto contexto, IntegracaoEnum integracaoEnum);

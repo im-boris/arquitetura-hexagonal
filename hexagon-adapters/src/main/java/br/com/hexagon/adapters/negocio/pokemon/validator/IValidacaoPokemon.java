@@ -1,4 +1,4 @@
-package br.com.hexagon.adapters.pokemon.validator;
+package br.com.hexagon.adapters.negocio.pokemon.validator;
 
 import br.com.hexagon.entidade.Pokemon;
 
