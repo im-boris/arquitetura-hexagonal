@@ -3,6 +3,7 @@ package br.com.hexagon.services;
 import br.com.hexagon.adapters.arquitetura.usecase.IUseCaseRunner;
 import br.com.hexagon.api.PokemonController;
 import br.com.hexagon.pojo.negocio.pokemon.RequisicaoCadastraPokemonDTO;
+import br.com.hexagon.usecases.pokemon.ContextoCadastraPokemon;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -13,8 +14,8 @@ public class PokemonService implements PokemonController {
     private IUseCaseRunner useCaseRunner;
 
     @Override
-    public void cadastra(RequisicaoCadastraPokemonDTO requisicao) throws Exception {
-        useCaseRunner.run(requisicao);
+    public ContextoCadastraPokemon cadastra(RequisicaoCadastraPokemonDTO requisicao) throws Exception {
+        return useCaseRunner.run(requisicao);
     }
 
 }

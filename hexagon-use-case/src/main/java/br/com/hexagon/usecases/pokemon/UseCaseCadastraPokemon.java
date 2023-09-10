@@ -14,7 +14,7 @@ import org.springframework.stereotype.Component;
 @Component
 @DefinicaoIntegracao(preExecucao = {},
                      posExecucao = {IntegracaoEnum.CADASTRA_POKEMON})
-public class CadastraPokemonUseCase implements IUseCase<CadastraPokemonContexto> {
+public class UseCaseCadastraPokemon implements IUseCase<ContextoCadastraPokemon> {
 
     @Autowired
     private IValidacaoPokemon validacaoPokemon;
@@ -27,18 +27,11 @@ public class CadastraPokemonUseCase implements IUseCase<CadastraPokemonContexto>
 
 
     @Override
-    public void execucao(CadastraPokemonContexto contexto) {
-        System.out.println(validacaoPokemon.verificaNome(new Pokemon()));
+    public void execucao(ContextoCadastraPokemon contexto) {
         System.out.println(validacaoPokemon.verificaNivelPoder());
         builder.toDto(new Pokemon());
         builder.toEntity(new PokemonDTO());
         integracao.executa(contexto, IntegracaoEnum.CADASTRA_POKEMON);
-        System.out.println(contexto.getRequisicao().getCodigoRequisicao());
-    }
-
-    @Override
-    public void posExecuta(CadastraPokemonContexto contexto) {
-        System.out.println("teste pos executa : " + contexto.getNovoNomePokemon());
     }
 
 }

@@ -8,10 +8,10 @@ import lombok.Setter;
 
 @Getter
 @Setter
-public class CadastraPokemonContexto extends Contexto<RequisicaoCadastraPokemonDTO> implements
+public class ContextoCadastraPokemon extends Contexto<RequisicaoCadastraPokemonDTO> implements
         ICadastraPokemon {
 
-    String novoNomePokemon;
+    private String novoNomePokemon;
 
     @Override
     public String getNomePokemon() {
